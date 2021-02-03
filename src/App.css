@@ -1,11 +1,48 @@
+
 .App {
   text-align: center;
 }
+.movie-container {
+  margin: 0 auto;
+  width: 50%;
+  border: 1px solid #333;
+  padding: 10px 0 30px 0;
+  border-radius: 5px;
+  margin-bottom : 50px;
+}
 
+.form-wrapper{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.title-input {
+  width: 500px;
+  height: 40px;
+  margin: 10px;
+}
+
+.text-area {
+  width: 80%;
+  min-height: 400px;
+}
+
+.submit-button {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+  background: indianred;
+  border-radius: 5px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.footer { position: fixed; bottom: 0; width: 100%; }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -22,6 +59,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.App-sider{
+  align-items: left;
 }
 
 .App-link {
