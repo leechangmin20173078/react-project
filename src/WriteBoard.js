@@ -12,7 +12,7 @@ function WriteBoard() {
         content: ''
     });
 
-    const { name, nickname } = inputs; // 비구조화 할당을 통해 값 추출
+    const { title, content } = inputs; // 비구조화 할당을 통해 값 추출
 
     const onChange = (e) => {
       const { value, name } = e.target; // 우선 e.target 에서 name 과 value 를 추출
