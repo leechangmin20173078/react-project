@@ -1,0 +1,12 @@
+
+
+{
+    "development" : {
+        "username": "changmin",
+        "password": "gkfdkqjwl1",
+        "database": "changmin",
+        "host": "database-1.c3ubltzilorj.ap-northeast-2.rds.amazonaws.com",
+        "port": "3306",
+        "dialect": "mysql"
+    }
+}

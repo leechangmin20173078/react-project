@@ -27,6 +27,15 @@ class App extends Component {
     this.setState({ host : res.data.host })
   }
 
+  componentDidMount() {
+    this._dbTest();
+  }
+  
+  _dbTest = async() => {
+    const res = await axios.get('/api/test');
+    console.log(res.data)
+  }
+
   render() {
 return (
  
