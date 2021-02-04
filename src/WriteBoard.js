@@ -21,6 +21,10 @@ function WriteBoard() {
         [name]: value // name 키를 가진 값을 value 로 설정
       });
     };
+    const getValue = e => {
+        const { name, value } = e.target;
+        console.log(name, value);
+    };
 
     return(
         <div className="App">

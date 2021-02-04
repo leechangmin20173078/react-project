@@ -1,4 +1,4 @@
-import {React} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import { Layout } from 'antd';
 import Board from './Board';
@@ -6,18 +6,37 @@ import Foot from './Foot';
 import Home from './Home';
 import {Route,Link} from 'react-router-dom';
 import WriteBoard from './WriteBoard';
+import axios from 'axios';
 
 const { Header, Footer, Sider,Content} = Layout;
 
-function App() {
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      host : '',
+    }
+  }
 
+  componentDidMount() {
+    this._getHost();
+  }
+
+  _getHost = async() => {
+    const res = await axios.get('/api/host');
+    this.setState({ host : res.data.host })
+  }
+
+  render() {
 return (
+ 
 
   <div className="App">
     <Layout>
       <Header>
         <h1>
           Chang's Blog
+          <h3> Welcome to <u> {this.state.host} </u> Blog! </h3>
         </h1>
       </Header>
       <Sider>
@@ -53,7 +72,7 @@ return (
   </div>
 
 );
-
+  }
 }
 
 export default App;
