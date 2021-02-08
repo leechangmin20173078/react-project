@@ -33,6 +33,6 @@ let sequelize = new Sequelize(
     .catch(err => {
         console.log('Unable to connect to the database: ', err);
     });
-
+ db.changboard = require('./changboard')(sequelize, Sequelize);
 db.secret = '(9*)5$&!3%^0%^@@2$1!#5@2!4';
 module.exports = db;
